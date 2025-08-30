@@ -10,7 +10,11 @@ export default {
         brand: {
           primary: "#0b0b0c",
           accent: "#d4af37",
+          secondary: "#0f172a",
+          secondaryLight: "#334155",
+          secondaryDark: "#020617",
           muted: "#f8fafc",
+          offWhite: "#fafafa",
           goldLight: "#f3e8b8",
         }
       },

@@ -1,6 +1,8 @@
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
 import SectionTitle from "../components/ui/SectionTitle";
+import { Phone, Mail } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1600&auto=format&fit=crop"
+            src="https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg"
             alt="Cidade"
             className="w-full h-[60vh] sm:h-[70vh] object-cover scale-105"
           />
@@ -29,7 +31,7 @@ export default function Home() {
                 Solicitar Proposta
               </Button>
               <Button
-                variant="dark"
+                variant="secondary"
                 href="https://senaadm.superlogica.net/clients/areadocondomino"
               >
                 Acesso Exclusivo
@@ -122,7 +124,7 @@ export default function Home() {
 
       <section
         id="contato"
-        className="section-padding bg-gradient-to-br from-[var(--brand-muted)] to-gray-50"
+        className="section-padding bg-gradient-to-br from-[var(--brand-muted)] to-[var(--brand-off-white)]"
       >
         <div className="max-w-7xl mx-auto px-4">
           <SectionTitle
@@ -146,9 +148,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center">
-                      <span className="text-[var(--brand-accent)] font-bold">
-                        ☎
-                      </span>
+                      <Phone className="w-6 h-6 text-[var(--brand-accent)]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Telefone</p>
@@ -162,9 +162,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center">
-                      <span className="text-[var(--brand-accent)] font-bold">
-                        @
-                      </span>
+                      <Mail className="w-6 h-6 text-[var(--brand-accent)]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">E-mail</p>
@@ -183,16 +181,18 @@ export default function Home() {
                     href="https://wa.me/5521997627530"
                     target="_blank"
                     rel="noreferrer"
-                    className="pill px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 font-semibold transition-all duration-300"
+                    className="pill px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 font-semibold transition-all duration-300 flex items-center gap-2"
                   >
+                    <FaWhatsapp className="w-5 h-5" />
                     WhatsApp
                   </a>
-                  <Button
-                    variant="secondary"
-                    href="https://senaadm.superlogica.net/clients/areadocondomino"
+                  <a
+                    href="mailto:comercial@sennacondominioseimoveis.com.br"
+                    className="pill px-6 py-3 bg-brand-secondary text-white hover:bg-brand-secondaryDark font-semibold transition-all duration-300 flex items-center gap-2"
                   >
-                    Acesso Exclusivo
-                  </Button>
+                    <Mail className="w-5 h-5" />
+                    E-mail
+                  </a>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function Home() {
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 min-h-[120px] focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent)]/20 transition resize-none"
               ></textarea>
               <button className="w-full rounded-xl px-6 py-4 bg-gradient-to-r from-[var(--brand-accent)] to-[#c9a332] text-black font-bold text-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-                Enviar Mensagem
+                Entre em Contato
               </button>
             </form>
           </div>

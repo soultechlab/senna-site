@@ -5,19 +5,19 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-lg border-b border-black/10">
+    <header className="sticky top-0 z-40 bg-brand-secondary backdrop-blur-lg border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
         <Link to="/">
           <img
-            src="logo.png"
+            src="logo.svg"
             alt="Logotipo Senna"
-            className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+            className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto object-contain"
           />
         </Link>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+          className="md:hidden p-2 rounded-lg hover:bg-white/20 transition text-white"
         >
           <svg
             className="w-6 h-6"
@@ -34,29 +34,38 @@ export default function Header() {
           </svg>
         </button>
 
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium">
-          <Link to="/services" className="hover:text-black/70">
-            Serviços
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base font-medium text-white">
+           <Link to="/" className="hover:text-white/70">
+            Inicio
           </Link>
-          <Link to="/about" className="hover:text-black/70">
+          <Link to="/condominio" className="hover:text-white/70">
+            Condomínio
+          </Link>
+          <Link to="/locacao" className="hover:text-white/70">
+            Locação
+          </Link>
+          <Link to="/venda" className="hover:text-white/70">
+            Venda
+          </Link>
+          <Link to="/about" className="hover:text-white/70">
             Quem Somos
-          </Link>
-          <Link to="/contact" className="hover:text-black/70">
-            Contato
           </Link>
         </nav>
       </div>
 
       {mobileOpen && (
-        <nav className="md:hidden mt-4 pt-4 border-t border-gray-200 px-4 pb-4 flex flex-col gap-4">
-          <Link to="/#servicos" onClick={() => setMobileOpen(false)}>
-            Serviços
+        <nav className="md:hidden mt-4 pt-4 border-t border-white/20 px-4 pb-4 flex flex-col gap-4 text-white">
+          <Link to="/condominio" onClick={() => setMobileOpen(false)}>
+            Condomínio
           </Link>
-          <Link to="/sobre" onClick={() => setMobileOpen(false)}>
+          <Link to="/locacao" onClick={() => setMobileOpen(false)}>
+            Locação
+          </Link>
+          <Link to="/venda" onClick={() => setMobileOpen(false)}>
+            Venda
+          </Link>
+          <Link to="/about" onClick={() => setMobileOpen(false)}>
             Quem Somos
-          </Link>
-          <Link to="/contato" onClick={() => setMobileOpen(false)}>
-            Contato
           </Link>
         </nav>
       )}
