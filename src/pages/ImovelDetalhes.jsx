@@ -54,13 +54,13 @@ export default function ImovelDetalhes() {
                 </div>
               )}
             </div>
-            <div className="text-2xl md:text-3xl font-bold text-yellow-500 mb-6">
+            <div className="text-2xl md:text-3xl font-bold text-[var(--brand-accent)] mb-6">
               R$ {imovel.preco.toLocaleString('pt-BR')}
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:+5521997627530"
-                className="px-8 py-4 bg-yellow-500 text-black font-bold rounded-full hover:bg-yellow-600 transition-colors inline-flex items-center justify-center"
+                className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
               >
                 Ligar Agora
               </a>
@@ -90,11 +90,11 @@ export default function ImovelDetalhes() {
               
               {/* Características */}
               <div className="bg-gray-50 rounded-xl p-6 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-yellow-600">Características</h3>
+                <h3 className="text-xl font-bold mb-4 text-[var(--brand-accent)]">Características</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {imovel.caracteristicas.map((caracteristica, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-[var(--brand-accent)] rounded-full"></div>
                       <span>{caracteristica}</span>
                     </div>
                   ))}
@@ -160,7 +160,7 @@ export default function ImovelDetalhes() {
 
               {/* Observações financeiras */}
               <div className="bg-gray-50 rounded-xl p-6 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-yellow-600">Informações Importantes</h3>
+                <h3 className="text-xl font-bold mb-4 text-[var(--brand-accent)]">Informações Importantes</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <p><strong>Financiamento:</strong> {imovel.observacoes.financiamento ? 'Aceito' : 'Não aceito'}</p>
@@ -211,7 +211,7 @@ export default function ImovelDetalhes() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Interessado neste{" "}
-            <span className="text-yellow-500">imóvel</span>?
+            <span className="text-[var(--brand-accent)]">imóvel</span>?
           </h3>
           <p className="text-lg text-white/90 mb-2">
             <strong>R$ {imovel.preco.toLocaleString('pt-BR')}</strong>
@@ -222,7 +222,7 @@ export default function ImovelDetalhes() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+5521997627530"
-              className="px-8 py-4 bg-yellow-500 text-black font-bold rounded-full hover:bg-yellow-600 transition-colors inline-flex items-center justify-center"
+              className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
             >
               Ligar Agora
             </a>

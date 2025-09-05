@@ -22,7 +22,7 @@ export default function Condominio() {
           <div className="text-white max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Administração de{" "}
-              <span className="text-yellow-500">Condomínios</span>
+              <span className="text-[var(--brand-accent)]">Condomínios</span>
             </h1>
             <p className="mt-4 text-lg text-white/90">
               Gestão completa e transparente para seu condomínio com tecnologia e atendimento personalizado
@@ -58,8 +58,8 @@ export default function Condominio() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white text-center p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <DollarSign className="w-8 h-8 text-yellow-600" />
+              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <DollarSign className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-xl font-bold mb-4">Gestão Financeira</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -80,8 +80,8 @@ export default function Condominio() {
             </div>
 
             <div className="bg-white text-center p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-8 h-8 text-yellow-600" />
+              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BarChart3 className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-xl font-bold mb-4">Relatórios Detalhados</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -102,8 +102,8 @@ export default function Condominio() {
             </div>
 
             <div className="bg-white text-center p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="w-8 h-8 text-yellow-600" />
+              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Smartphone className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-xl font-bold mb-4">Portal Online</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -199,74 +199,13 @@ export default function Condominio() {
         </div>
       </section>
 
-      {/* Condomínios Administrados */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionTitle
-            badge="Nossos Condomínios"
-            title="Condomínios que Administramos"
-            subtitle="Conheça alguns dos condomínios que confiam na nossa gestão especializada"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {condominios.map((condominio) => (
-              <div key={condominio.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative">
-                  <img
-                    src={condominio.imagemPrincipal}
-                    alt={condominio.nome}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                    {condominio.totalUnidades} unidades
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-gray-900">
-                    {condominio.nome}
-                  </h3>
-                  <p className="text-gray-600 mb-4 flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    {condominio.endereco}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Building className="w-4 h-4" />
-                      <span>{condominio.tipo}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{condominio.anoConstucao}</span>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-600 text-sm mb-4">
-                    {condominio.descricao.length > 100 ? condominio.descricao.substring(0, 100) + "..." : condominio.descricao}
-                  </p>
-
-                  <div className="space-y-2">
-                    <div className="text-sm">
-                      <span className="font-semibold">Taxa Admin:</span> {condominio.taxas.administracao}
-                    </div>
-                    <div className="text-sm">
-                      <span className="font-semibold">Condomínio médio:</span> {condominio.taxas.condominio}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="section-padding bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">
             Pronto para uma gestão{" "}
-            <span className="text-yellow-500">profissional</span>?
+            <span className="text-[var(--brand-accent)]">profissional</span>?
           </h3>
           <p className="text-lg text-gray-600 mb-8">
             Entre em contato conosco e descubra como podemos otimizar a administração do seu condomínio
@@ -274,7 +213,7 @@ export default function Condominio() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+5521997627530"
-              className="px-8 py-4 bg-yellow-500 text-black font-bold rounded-full hover:bg-yellow-600 transition-colors inline-flex items-center justify-center"
+              className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
             >
               Ligar Agora
             </a>

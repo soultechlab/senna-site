@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src="logo.svg"
+              src="logo.png"
               alt="Logotipo Sena"
               className="h-8 w-auto object-contain"
             />

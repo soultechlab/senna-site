@@ -60,12 +60,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10">
             <Card
-              img="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop"
+              img="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?q=80&w=1200&auto=format&fit=crop"
               title="Administração de Condomínios"
               description="Gestão financeira, assembleias, boletos e comunicação integrada."
             />
             <Card
-              img="https://images.unsplash.com/photo-1489370321024-e0410ad08da4?q=80&w=1200&auto=format&fit=crop"
+              img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop"
               title="Locação"
               description="Intermediação completa com análise, vistoria e contratos."
             />
@@ -75,7 +75,7 @@ export default function Home() {
               description="Avaliação, divulgação e negociação segura do seu imóvel."
             />
             <Card
-              img="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=1200&auto=format&fit=crop"
+              img="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop"
               title="Suporte ao Condômino"
               description="App do condômino com 2ª via, comunicados e serviços."
             />
@@ -101,7 +101,7 @@ export default function Home() {
               Quem <span className="text-[var(--brand-accent)]">Somos</span>
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Senna Condomínios e Imóveis é uma empresa com experiência no
+              Senna Administradora é uma empresa com experiência no
               mercado imobiliário, realizando administração de condomínios,
               locações, compra e venda de imóveis. Nosso diferencial é o
               atendimento personalizado direcionado à necessidade de cada

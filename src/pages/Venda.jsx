@@ -62,7 +62,7 @@ export default function Venda() {
                         alt={imovel.titulo}
                         className="w-full h-64 object-cover"
                       />
-                      <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="absolute top-4 left-4 bg-[var(--brand-accent)] text-black px-3 py-1 rounded-full text-sm font-bold">
                         R$ {imovel.preco.toLocaleString('pt-BR')}
                       </div>
                     </div>
@@ -99,7 +99,7 @@ export default function Venda() {
                         <span className="text-blue-900 font-bold text-lg">
                           {imovel.tipo}
                         </span>
-                        <div className="flex items-center gap-2 text-yellow-600 font-semibold">
+                        <div className="flex items-center gap-2 text-[var(--brand-accent)] font-semibold">
                           <Eye className="w-4 h-4" />
                           Ver Detalhes
                         </div>

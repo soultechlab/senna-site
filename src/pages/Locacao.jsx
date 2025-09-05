@@ -22,7 +22,7 @@ export default function Locacao() {
           <div className="text-white max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Locação de{" "}
-              <span className="text-yellow-500">Imóveis</span>
+              <span className="text-[var(--brand-accent)]">Imóveis</span>
             </h1>
             <p className="mt-4 text-lg text-white/90">
               Encontre o imóvel ideal ou coloque o seu para alugar com segurança e agilidade
@@ -155,8 +155,8 @@ export default function Locacao() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-yellow-600" />
+              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Home className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-lg font-bold mb-2">Casas</h3>
               <p className="text-gray-600 text-sm">
@@ -175,8 +175,8 @@ export default function Locacao() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Store className="w-8 h-8 text-yellow-600" />
+              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Store className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-lg font-bold mb-2">Comerciais</h3>
               <p className="text-gray-600 text-sm">
@@ -259,7 +259,7 @@ export default function Locacao() {
                     alt={locacao.titulo}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="absolute top-4 left-4 bg-[var(--brand-accent)] text-black px-3 py-1 rounded-full text-sm font-bold">
                     R$ {locacao.preco.toLocaleString('pt-BR')}/mês
                   </div>
                   {locacao.mobiliado && (
@@ -297,24 +297,12 @@ export default function Locacao() {
                     {locacao.descricao.length > 100 ? locacao.descricao.substring(0, 100) + "..." : locacao.descricao}
                   </p>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500">IPTU:</span>
-                      <span className="font-semibold">{locacao.observacoes.iptu}</span>
-                    </div>
-                    {locacao.observacoes.condominio !== "Não há" && (
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-500">Condomínio:</span>
-                        <span className="font-semibold">{locacao.observacoes.condominio}</span>
-                      </div>
-                    )}
-                  </div>
 
                   <div className="flex items-center justify-between">
                     <span className="text-blue-900 font-bold text-lg">
                       {locacao.tipo}
                     </span>
-                    <div className="flex items-center gap-2 text-yellow-600 font-semibold text-sm">
+                    <div className="flex items-center gap-2 text-[var(--brand-accent)] font-semibold text-sm">
                       <Eye className="w-4 h-4" />
                       Ver Detalhes
                     </div>
@@ -327,12 +315,15 @@ export default function Locacao() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-blue-900">
+      <section className="section-padding bg-brand-secondary">
+        {/* Linha de divisão */}
+        <div className="border-t border-white/20 mb-16"></div>
+        
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Encontre seu próximo{" "}
-            <span className="text-yellow-500">lar</span> ou{" "}
-            <span className="text-yellow-500">invista</span> conosco
+            <span className="text-[var(--brand-accent)]">lar</span> ou{" "}
+            <span className="text-[var(--brand-accent)]">invista</span> conosco
           </h3>
           <p className="text-lg text-white/90 mb-8">
             Entre em contato e descubra as melhores oportunidades de locação
@@ -340,7 +331,7 @@ export default function Locacao() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+5521997627530"
-              className="px-8 py-4 bg-yellow-500 text-black font-bold rounded-full hover:bg-yellow-600 transition-colors inline-flex items-center justify-center"
+              className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
             >
               Falar com Especialista
             </a>

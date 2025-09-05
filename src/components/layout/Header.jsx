@@ -9,9 +9,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
         <Link to="/">
           <img
-            src="logo.svg"
+            src="logo.png"
             alt="Logotipo Senna"
-            className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto object-contain"
+            className="h-16 sm:h-18 md:h-20 lg:h-22 w-auto object-contain"
           />
         </Link>
 
