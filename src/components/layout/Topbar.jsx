@@ -44,7 +44,7 @@ export default function Topbar() {
             </a>
             <a
               className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--brand-accent)] hover:text-black transition-all duration-300 group"
-              href="https://instagram.com"
+              href="https://www.instagram.com/sennaadm/"
               target="_blank"
               rel="noreferrer"
               title="Instagram"

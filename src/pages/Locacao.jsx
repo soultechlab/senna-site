@@ -1,19 +1,69 @@
 import SectionTitle from "../components/ui/SectionTitle";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
+import SEO from "../components/SEO";
 import { Home, FileText, Handshake, DollarSign, Search, FileCheck, Building2, MapPin, Store, TreePine, Bed, Bath, Square, Eye } from "lucide-react";
 import { locacoes } from "../data/locacoes";
 import { Link } from "react-router-dom";
 
 export default function Locacao() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Locação de Imóveis - Senna Administradora",
+    "description": "Serviços completos de locação de imóveis no Rio de Janeiro. Casas, apartamentos, salas comerciais e terrenos para alugar.",
+    "url": "https://sennacondominioseimoveis.com.br/locacao",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sennacondominioseimoveis.com.br"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Locação",
+          "item": "https://sennacondominioseimoveis.com.br/locacao"
+        }
+      ]
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Locação de Imóveis",
+      "description": "Intermediação completa para locação de imóveis residenciais e comerciais no Rio de Janeiro",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Senna Administradora"
+      },
+      "areaServed": "Rio de Janeiro, RJ",
+      "serviceType": [
+        "Locação de Casas",
+        "Locação de Apartamentos", 
+        "Locação de Imóveis Comerciais",
+        "Locação de Terrenos"
+      ]
+    }
+  };
+
   return (
-    <main>
+    <>
+      <SEO
+        title="Locação de Imóveis no Rio de Janeiro | Senna Administradora"
+        description="Locação de casas, apartamentos e imóveis comerciais no RJ. Processo simplificado, análise de inquilinos e gestão completa. Encontre seu próximo lar!"
+        keywords="locação de imóveis Rio de Janeiro, alugar casa RJ, alugar apartamento Rio de Janeiro, locação comercial RJ, imóveis para alugar"
+        canonicalUrl="https://sennacondominioseimoveis.com.br/locacao"
+        structuredData={structuredData}
+      />
+      <main>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"
-            alt="Apartamentos para locação no Brasil"
+            alt="Apartamentos modernos para locação no Rio de Janeiro - Senna Administradora"
             className="w-full h-[60vh] object-cover scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50"></div>
@@ -242,7 +292,7 @@ export default function Locacao() {
       </section>
 
       {/* Imóveis Disponíveis */}
-      <section className="section-padding bg-white">
+      {/*<section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <SectionTitle
             badge="Disponíveis"
@@ -312,7 +362,7 @@ export default function Locacao() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* CTA Section */}
       <section className="section-padding bg-brand-secondary">
@@ -345,5 +395,6 @@ export default function Locacao() {
         </div>
       </section>
     </main>
+    </>
   );
 }
