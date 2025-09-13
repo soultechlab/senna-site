@@ -7,7 +7,7 @@ const SEO = ({
   ogTitle,
   ogDescription,
   ogImage = "/logo.png",
-  canonicalUrl = "https://sennacondominioseimoveis.com.br",
+  canonicalUrl = "https://sennaadministradora.com/",
   structuredData,
 }) => {
   useEffect(() => {
