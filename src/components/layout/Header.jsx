@@ -36,7 +36,7 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base font-medium text-white">
            <Link to="/" className="hover:text-white/70">
-            Inicio
+            Início
           </Link>
           <Link to="/condominio" className="hover:text-white/70">
             Condomínio
