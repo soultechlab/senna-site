@@ -1,6 +1,7 @@
 import SectionTitle from "../components/ui/SectionTitle";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
+import SuperlogicaBadges from "../components/ui/SuperlogicaBadges";
 import { DollarSign, Wrench, BarChart3, Users, Smartphone, Scale, Check, Handshake, Zap, Briefcase, MapPin, Building, Calendar } from "lucide-react";
 import { condominios } from "../data/condominios";
 import { Link } from "react-router-dom";
@@ -196,6 +197,18 @@ export default function Condominio() {
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[var(--brand-secondary)] to-[var(--brand-secondary-light)] rounded-3xl opacity-20"></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* App Download Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <SectionTitle
+            badge="Aplicativo"
+            title="Baixe o app Área do Condômino"
+            subtitle="Acompanhe boletos, comunicados e solicitações direto do celular."
+          />
+          <SuperlogicaBadges className="mt-4 md:mt-8" />
         </div>
       </section>
 
