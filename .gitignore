@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Pacote bruto das artes da marca (84MB) — não versionar
+ARTES CAPITAL*.zip

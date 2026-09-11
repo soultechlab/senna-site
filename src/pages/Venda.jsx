@@ -13,9 +13,9 @@ export default function Venda() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Venda de Imóveis - Senna Administradora",
+    "name": "Venda de Imóveis - Capital Administradora",
     "description": "Compra e venda de imóveis no Rio de Janeiro. Casas, apartamentos, terrenos e imóveis comerciais com avaliação profissional e suporte completo.",
-    "url": "https://sennacondominioseimoveis.com.br/venda",
+    "url": "https://administradoracapital.com.br/venda",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -23,13 +23,13 @@ export default function Venda() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://sennacondominioseimoveis.com.br"
+          "item": "https://administradoracapital.com.br"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Venda",
-          "item": "https://sennacondominioseimoveis.com.br/venda"
+          "item": "https://administradoracapital.com.br/venda"
         }
       ]
     },
@@ -38,8 +38,10 @@ export default function Venda() {
       "name": "Compra e Venda de Imóveis",
       "description": "Intermediação completa para compra e venda de imóveis no Rio de Janeiro com avaliação profissional e suporte jurídico",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Senna Administradora"
+        "@type": "RealEstateAgent",
+        "@id": "https://administradoracapital.com.br/#business",
+        "name": "Capital Administradora",
+        "url": "https://administradoracapital.com.br/"
       },
       "areaServed": "Rio de Janeiro, RJ",
       "serviceType": [
@@ -56,19 +58,19 @@ export default function Venda() {
   return (
     <>
       <SEO
-        title="Venda de Imóveis no Rio de Janeiro | Senna Administradora"
+        title="Venda de Imóveis no Rio de Janeiro | Capital Administradora"
         description="Compra e venda de casas, apartamentos e terrenos no RJ. Avaliação profissional, marketing estratégico e suporte completo até a escritura."
-        keywords="venda de imóveis Rio de Janeiro, comprar casa RJ, comprar apartamento Rio de Janeiro, venda comercial RJ, imóveis à venda"
-        canonicalUrl="https://sennacondominioseimoveis.com.br/venda"
+        keywords="Capital Administradora, imobiliária Rio de Janeiro, venda de imóveis Rio de Janeiro, comprar casa RJ, comprar apartamento Rio de Janeiro, venda comercial RJ, imóveis à venda"
+        canonicalUrl="https://administradoracapital.com.br/venda"
         structuredData={structuredData}
       />
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="on-dark relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1200&auto=format&fit=crop"
-            alt="Casas e apartamentos à venda no Rio de Janeiro - Senna Administradora"
+            alt="Casas e apartamentos à venda no Rio de Janeiro - Capital Administradora"
             className="w-full h-[60vh] object-cover scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50"></div>
@@ -111,11 +113,11 @@ export default function Venda() {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <h3 className="text-2xl font-bold mb-6">
-                Para <span className="text-[var(--brand-accent)]">Compradores</span>
+                Para <span className="text-metal-ink">Compradores</span>
               </h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <Home className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
                   <div>
@@ -127,7 +129,7 @@ export default function Venda() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <FileText className="w-6 h-6 text-[var(--brand-secondary)]" />
                   </div>
                   <div>
@@ -139,7 +141,7 @@ export default function Venda() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <Handshake className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
                   <div>
@@ -158,7 +160,7 @@ export default function Venda() {
               </h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <DollarSign className="w-6 h-6 text-[var(--brand-secondary)]" />
                   </div>
                   <div>
@@ -170,7 +172,7 @@ export default function Venda() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <Search className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
                   <div>
@@ -182,7 +184,7 @@ export default function Venda() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <FileCheck className="w-6 h-6 text-[var(--brand-secondary)]" />
                   </div>
                   <div>
@@ -218,7 +220,7 @@ export default function Venda() {
                         alt={imovel.titulo}
                         className="w-full h-64 object-cover"
                       />
-                      <div className="absolute top-4 left-4 bg-[var(--brand-accent)] text-black px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="absolute top-4 left-4 chip-metal px-3 py-1 rounded-full text-sm font-bold">
                         R$ {imovel.preco.toLocaleString('pt-BR')}
                       </div>
                     </div>
@@ -252,7 +254,7 @@ export default function Venda() {
                       </p>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-blue-900 font-bold text-lg">
+                        <span className="text-brand-graphite font-bold text-lg">
                           {imovel.tipo}
                         </span>
                         <div className="flex items-center gap-2 text-[var(--brand-accent)] font-semibold">
@@ -286,7 +288,7 @@ export default function Venda() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Home className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-lg font-bold mb-2">Casas</h3>
@@ -296,8 +298,8 @@ export default function Venda() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-8 h-8 text-blue-900" />
+              <div className="w-16 h-16 bg-brand-graphite/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-8 h-8 text-brand-graphite" />
               </div>
               <h3 className="text-lg font-bold mb-2">Apartamentos</h3>
               <p className="text-gray-600 text-sm">
@@ -306,7 +308,7 @@ export default function Venda() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Store className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-lg font-bold mb-2">Comerciais</h3>
@@ -316,8 +318,8 @@ export default function Venda() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TreePine className="w-8 h-8 text-blue-900" />
+              <div className="w-16 h-16 bg-brand-graphite/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TreePine className="w-8 h-8 text-brand-graphite" />
               </div>
               <h3 className="text-lg font-bold mb-2">Terrenos</h3>
               <p className="text-gray-600 text-sm">
@@ -340,7 +342,7 @@ export default function Venda() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-[var(--brand-accent)] text-3xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-bold mb-4">Avaliação</h3>
@@ -350,7 +352,7 @@ export default function Venda() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-[var(--brand-secondary)] text-3xl font-bold">2</span>
               </div>
               <h3 className="text-xl font-bold mb-4">Marketing</h3>
@@ -360,7 +362,7 @@ export default function Venda() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-[var(--brand-accent)] text-3xl font-bold">3</span>
               </div>
               <h3 className="text-xl font-bold mb-4">Fechamento</h3>
@@ -373,7 +375,7 @@ export default function Venda() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-brand-secondary">
+      <section className="on-dark section-padding bg-brand-secondary">
         <div className="border-t border-white/20 mb-16"></div>
         
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -388,7 +390,7 @@ export default function Venda() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+5521997627530"
-              className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
+              className="btn-primary pill px-8 py-4 font-bold inline-flex items-center justify-center"
             >
               Falar com Especialista
             </a>

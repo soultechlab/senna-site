@@ -2,7 +2,7 @@ export default function SectionTitle({ badge, title, subtitle }) {
   return (
     <div className="text-center max-w-4xl mx-auto content-spacing">
       {badge && (
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-accent)]/10 text-[var(--brand-accent)] text-sm font-semibold uppercase mb-4">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-accent-soft)] text-[var(--brand-accent)] text-sm font-semibold uppercase mb-4">
           {badge}
         </div>
       )}

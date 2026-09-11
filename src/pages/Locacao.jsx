@@ -10,9 +10,9 @@ export default function Locacao() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Locação de Imóveis - Senna Administradora",
+    "name": "Locação de Imóveis - Capital Administradora",
     "description": "Serviços completos de locação de imóveis no Rio de Janeiro. Casas, apartamentos, salas comerciais e terrenos para alugar.",
-    "url": "https://sennacondominioseimoveis.com.br/locacao",
+    "url": "https://administradoracapital.com.br/locacao",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -20,13 +20,13 @@ export default function Locacao() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://sennacondominioseimoveis.com.br"
+          "item": "https://administradoracapital.com.br"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Locação",
-          "item": "https://sennacondominioseimoveis.com.br/locacao"
+          "item": "https://administradoracapital.com.br/locacao"
         }
       ]
     },
@@ -35,8 +35,10 @@ export default function Locacao() {
       "name": "Locação de Imóveis",
       "description": "Intermediação completa para locação de imóveis residenciais e comerciais no Rio de Janeiro",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Senna Administradora"
+        "@type": "RealEstateAgent",
+        "@id": "https://administradoracapital.com.br/#business",
+        "name": "Capital Administradora",
+        "url": "https://administradoracapital.com.br/"
       },
       "areaServed": "Rio de Janeiro, RJ",
       "serviceType": [
@@ -51,19 +53,19 @@ export default function Locacao() {
   return (
     <>
       <SEO
-        title="Locação de Imóveis no Rio de Janeiro | Senna Administradora"
+        title="Locação de Imóveis no Rio de Janeiro | Capital Administradora"
         description="Locação de casas, apartamentos e imóveis comerciais no RJ. Processo simplificado, análise de inquilinos e gestão completa. Encontre seu próximo lar!"
-        keywords="locação de imóveis Rio de Janeiro, alugar casa RJ, alugar apartamento Rio de Janeiro, locação comercial RJ, imóveis para alugar"
-        canonicalUrl="https://sennacondominioseimoveis.com.br/locacao"
+        keywords="Capital Administradora, administradora de imóveis RJ, locação de imóveis Rio de Janeiro, alugar casa RJ, alugar apartamento Rio de Janeiro, locação comercial RJ, imóveis para alugar"
+        canonicalUrl="https://administradoracapital.com.br/locacao"
         structuredData={structuredData}
       />
       <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="on-dark relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"
-            alt="Apartamentos modernos para locação no Rio de Janeiro - Senna Administradora"
+            alt="Apartamentos modernos para locação no Rio de Janeiro - Capital Administradora"
             className="w-full h-[60vh] object-cover scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50"></div>
@@ -106,11 +108,11 @@ export default function Locacao() {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <h3 className="text-2xl font-bold mb-6">
-                Para <span className="text-[var(--brand-accent)]">Inquilinos</span>
+                Para <span className="text-metal-ink">Inquilinos</span>
               </h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <Home className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
                   <div>
@@ -122,7 +124,7 @@ export default function Locacao() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <FileText className="w-6 h-6 text-[var(--brand-secondary)]" />
                   </div>
                   <div>
@@ -134,7 +136,7 @@ export default function Locacao() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <Handshake className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
                   <div>
@@ -153,7 +155,7 @@ export default function Locacao() {
               </h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <DollarSign className="w-6 h-6 text-[var(--brand-secondary)]" />
                   </div>
                   <div>
@@ -165,7 +167,7 @@ export default function Locacao() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <Search className="w-6 h-6 text-[var(--brand-accent)]" />
                   </div>
                   <div>
@@ -177,7 +179,7 @@ export default function Locacao() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center flex-shrink-0">
                     <FileCheck className="w-6 h-6 text-[var(--brand-secondary)]" />
                   </div>
                   <div>
@@ -205,7 +207,7 @@ export default function Locacao() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Home className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-lg font-bold mb-2">Casas</h3>
@@ -215,8 +217,8 @@ export default function Locacao() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-8 h-8 text-blue-900" />
+              <div className="w-16 h-16 bg-brand-graphite/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-8 h-8 text-brand-graphite" />
               </div>
               <h3 className="text-lg font-bold mb-2">Apartamentos</h3>
               <p className="text-gray-600 text-sm">
@@ -225,7 +227,7 @@ export default function Locacao() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Store className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-lg font-bold mb-2">Comerciais</h3>
@@ -235,8 +237,8 @@ export default function Locacao() {
             </div>
 
             <div className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TreePine className="w-8 h-8 text-blue-900" />
+              <div className="w-16 h-16 bg-brand-graphite/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TreePine className="w-8 h-8 text-brand-graphite" />
               </div>
               <h3 className="text-lg font-bold mb-2">Terrenos</h3>
               <p className="text-gray-600 text-sm">
@@ -259,7 +261,7 @@ export default function Locacao() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-[var(--brand-accent)] text-3xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-bold mb-4">Avaliação</h3>
@@ -269,7 +271,7 @@ export default function Locacao() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--brand-secondary)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[var(--brand-secondary-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-[var(--brand-secondary)] text-3xl font-bold">2</span>
               </div>
               <h3 className="text-xl font-bold mb-4">Divulgação</h3>
@@ -279,7 +281,7 @@ export default function Locacao() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-[var(--brand-accent)] text-3xl font-bold">3</span>
               </div>
               <h3 className="text-xl font-bold mb-4">Fechamento</h3>
@@ -309,7 +311,7 @@ export default function Locacao() {
                     alt={locacao.titulo}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-[var(--brand-accent)] text-black px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="absolute top-4 left-4 chip-metal px-3 py-1 rounded-full text-sm font-bold">
                     R$ {locacao.preco.toLocaleString('pt-BR')}/mês
                   </div>
                   {locacao.mobiliado && (
@@ -349,7 +351,7 @@ export default function Locacao() {
 
 
                   <div className="flex items-center justify-between">
-                    <span className="text-blue-900 font-bold text-lg">
+                    <span className="text-brand-graphite font-bold text-lg">
                       {locacao.tipo}
                     </span>
                     <div className="flex items-center gap-2 text-[var(--brand-accent)] font-semibold text-sm">
@@ -365,7 +367,7 @@ export default function Locacao() {
       </section>*/}
 
       {/* CTA Section */}
-      <section className="section-padding bg-brand-secondary">
+      <section className="on-dark section-padding bg-brand-secondary">
         {/* Linha de divisão */}
         <div className="border-t border-white/20 mb-16"></div>
         
@@ -381,7 +383,7 @@ export default function Locacao() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+5521997627530"
-              className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
+              className="btn-primary pill px-8 py-4 font-bold inline-flex items-center justify-center"
             >
               Falar com Especialista
             </a>

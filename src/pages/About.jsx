@@ -1,12 +1,36 @@
 import SectionTitle from "../components/ui/SectionTitle";
 import Card from "../components/ui/Card";
 import { Handshake, Zap, Briefcase } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function About() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Quem Somos | Capital Administradora",
+    "url": "https://administradoracapital.com.br/about",
+    "description":
+      "História, valores e diferenciais da Capital Administradora, administradora de condomínios e imóveis no Rio de Janeiro.",
+    "mainEntity": {
+      "@type": "RealEstateAgent",
+      "@id": "https://administradoracapital.com.br/#business",
+      "name": "Capital Administradora",
+      "url": "https://administradoracapital.com.br/"
+    }
+  };
+
   return (
+    <>
+      <SEO
+        title="Quem Somos | Capital Administradora — Condomínios e Imóveis no RJ"
+        description="Conheça a Capital Administradora: experiência em administração de condomínios, locação e venda de imóveis no Rio de Janeiro, com atendimento personalizado a cada cliente."
+        keywords="Capital Administradora, quem somos, sobre a Capital Administradora, administradora de condomínios Rio de Janeiro, empresa de gestão condominial RJ"
+        canonicalUrl="https://administradoracapital.com.br/about"
+        structuredData={structuredData}
+      />
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="on-dark relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
@@ -28,25 +52,30 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <section className="section-padding bg-brand-offWhite">
+      <section className="section-padding bg-brand-offWhite overflow-hidden">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <SectionTitle
               badge="Nossa História"
-              title="Senna Administradora"
+              title="Capital Administradora"
             />
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-gray-700">
-                A <strong>Senna Administradora</strong> é uma empresa com experiência no mercado imobiliário, realizando administração de condomínios, locações, compra e venda de imóveis.
+                A <strong>Capital Administradora</strong> é uma empresa com experiência no mercado imobiliário, realizando administração de condomínios, locações, compra e venda de imóveis.
               </p>
               <p className="text-lg leading-relaxed text-gray-700">
                 Nosso diferencial é o <span className="text-[var(--brand-accent)] font-semibold">atendimento personalizado</span> direcionado à necessidade de cada cliente.
               </p>
               <p className="text-lg leading-relaxed text-gray-700">
                 É importante ressaltar que nosso trabalho pauta-se por desenvolver e prestar um serviço ainda mais eficaz, levando em consideração as peculiaridades de cada caso, esclarecendo e orientando, servindo como verdadeiro suporte aos seus interesses.
+              </p>
+              <p className="text-base leading-relaxed text-gray-500 border-l-2 border-brand-graphite/20 pl-4">
+                Na <strong>Capital Administradora</strong>, cada condomínio e
+                cada imóvel têm um responsável direto: você fala com quem
+                resolve, com prestação de contas clara e resposta rápida.
               </p>
             </div>
             <div className="relative">
@@ -55,14 +84,14 @@ export default function About() {
                 alt="Equipe trabalhando"
                 className="rounded-2xl shadow-medium w-full"
               />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-[var(--brand-accent)] to-[#c9a332] rounded-3xl opacity-20"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] rounded-3xl opacity-20"></div>
             </div>
           </div>
 
           {/* Values Section */}
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white text-center p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Handshake className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -74,8 +103,8 @@ export default function About() {
             </div>
 
             <div className="bg-white text-center p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-900/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-blue-900" />
+              <div className="w-16 h-16 bg-brand-graphite/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-brand-graphite" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">
                 Eficiência
@@ -86,7 +115,7 @@ export default function About() {
             </div>
 
             <div className="bg-white text-center p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Briefcase className="w-8 h-8 text-[var(--brand-accent)]" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -103,7 +132,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">
                 Na certeza de que podemos desenvolver bons trabalhos em{" "}
-                <span className="text-[var(--brand-accent)]">parceria</span>
+                <span className="text-metal-ink">parceria</span>
               </h3>
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                 Colocamo-nos à sua inteira disposição para quaisquer esclarecimentos adicionais.
@@ -111,13 +140,13 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+5521997627530"
-                  className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
+                  className="btn-primary pill px-8 py-4 font-bold inline-flex items-center justify-center"
                 >
                   Entre em Contato
                 </a>
                 <a
                   href="/"
-                  className="px-8 py-4 bg-blue-900 text-white font-bold rounded-full hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
+                  className="btn-secondary pill px-8 py-4 font-bold inline-flex items-center justify-center"
                 >
                   Nossos Serviços
                 </a>
@@ -127,5 +156,6 @@ export default function About() {
         </div>
       </section>
     </main>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import { MapPin, Bed, Bath, Square, Car } from "lucide-react";
 import { imoveis } from "../data/imoveis";
+import SEO from "../components/SEO";
 
 export default function ImovelDetalhes() {
   const { id } = useParams();
@@ -13,10 +14,47 @@ export default function ImovelDetalhes() {
     return <Navigate to="/venda" replace />;
   }
 
+  const canonicalUrl = `https://administradoracapital.com.br/venda/${imovel.id}`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": imovel.titulo,
+    "description": imovel.descricao,
+    "image": imovel.imagemPrincipal,
+    "url": canonicalUrl,
+    "category": imovel.tipo,
+    "brand": {
+      "@type": "Brand",
+      "name": "Capital Administradora"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": imovel.preco,
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "url": canonicalUrl,
+      "seller": {
+        "@type": "RealEstateAgent",
+        "@id": "https://administradoracapital.com.br/#business",
+        "name": "Capital Administradora"
+      }
+    }
+  };
+
   return (
+    <>
+      <SEO
+        title={`${imovel.titulo} | Capital Administradora`}
+        description={`${imovel.descricao} ${imovel.area}, ${imovel.quartos} quarto(s), ${imovel.vagas} vaga(s) — ${imovel.endereco}. Fale com a Capital Administradora.`}
+        keywords={`${imovel.tipo} à venda Rio de Janeiro, ${imovel.titulo}, ${imovel.endereco}, imóvel à venda RJ, Capital Administradora`}
+        ogImage={imovel.imagemPrincipal}
+        ogImageAlt={imovel.titulo}
+        canonicalUrl={canonicalUrl}
+        structuredData={structuredData}
+      />
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="on-dark relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={imovel.imagemPrincipal}
@@ -60,7 +98,7 @@ export default function ImovelDetalhes() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:+5521997627530"
-                className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
+                className="btn-primary pill px-8 py-4 font-bold inline-flex items-center justify-center"
               >
                 Ligar Agora
               </a>
@@ -107,7 +145,7 @@ export default function ImovelDetalhes() {
                   {imovel.detalhes.primeiroAndar && (
                     <div className="grid md:grid-cols-2 gap-8 mb-8">
                       <div>
-                        <h3 className="text-xl font-bold mb-4 text-blue-900">Primeiro andar</h3>
+                        <h3 className="text-xl font-bold mb-4 text-brand-graphite">Primeiro andar</h3>
                         <ul className="space-y-2">
                           {imovel.detalhes.primeiroAndar.map((item, index) => (
                             <li key={index}>• {item}</li>
@@ -117,7 +155,7 @@ export default function ImovelDetalhes() {
                       
                       {imovel.detalhes.segundoAndar && (
                         <div>
-                          <h3 className="text-xl font-bold mb-4 text-blue-900">Segundo andar</h3>
+                          <h3 className="text-xl font-bold mb-4 text-brand-graphite">Segundo andar</h3>
                           <ul className="space-y-2">
                             {imovel.detalhes.segundoAndar.map((item, index) => (
                               <li key={index}>• {item}</li>
@@ -130,11 +168,11 @@ export default function ImovelDetalhes() {
 
                   {imovel.detalhes.ambiente && (
                     <div className="mb-8">
-                      <h3 className="text-xl font-bold mb-4 text-blue-900">Ambientes</h3>
+                      <h3 className="text-xl font-bold mb-4 text-brand-graphite">Ambientes</h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         {imovel.detalhes.ambiente.map((item, index) => (
                           <div key={index} className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
+                            <div className="w-2 h-2 bg-brand-graphite rounded-full"></div>
                             <span>{item}</span>
                           </div>
                         ))}
@@ -144,11 +182,11 @@ export default function ImovelDetalhes() {
 
                   {imovel.detalhes.anexo && (
                     <div className="mb-8">
-                      <h3 className="text-xl font-bold mb-4 text-blue-900">Casa Anexo</h3>
+                      <h3 className="text-xl font-bold mb-4 text-brand-graphite">Casa Anexo</h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         {imovel.detalhes.anexo.map((item, index) => (
                           <div key={index} className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-blue-900 rounded-full"></div>
+                            <div className="w-2 h-2 bg-brand-graphite rounded-full"></div>
                             <span>{item}</span>
                           </div>
                         ))}
@@ -207,7 +245,7 @@ export default function ImovelDetalhes() {
       </section>
 
       {/* Contact CTA */}
-      <section className="section-padding bg-gradient-to-br from-[var(--brand-secondary)] to-[var(--brand-secondary-light)]">
+      <section className="on-dark section-padding bg-gradient-to-br from-[var(--brand-secondary)] to-[var(--brand-secondary-light)]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Interessado neste{" "}
@@ -222,7 +260,7 @@ export default function ImovelDetalhes() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+5521997627530"
-              className="px-8 py-4 bg-[var(--brand-accent)] text-black font-bold rounded-full hover:bg-[#c9a332] transition-colors inline-flex items-center justify-center"
+              className="btn-primary pill px-8 py-4 font-bold inline-flex items-center justify-center"
             >
               Ligar Agora
             </a>
@@ -238,5 +276,6 @@ export default function ImovelDetalhes() {
         </div>
       </section>
     </main>
+    </>
   );
 }

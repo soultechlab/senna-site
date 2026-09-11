@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sennacondominioseimoveis.com.br/sitemap.xml
+Sitemap: https://administradoracapital.com.br/sitemap.xml
 
 # Specific rules for different crawlers
 User-agent: Googlebot
@@ -31,3 +31,5 @@ Allow: /*.jpeg$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.ico$
+Allow: /*.webmanifest$
+Allow: /*.webp$

@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://sennacondominioseimoveis.com.br/</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <loc>https://administradoracapital.com.br/</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
     <priority>1.00</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://sennacondominioseimoveis.com.br/condominio</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <loc>https://administradoracapital.com.br/condominio</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://sennacondominioseimoveis.com.br/locacao</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <loc>https://administradoracapital.com.br/locacao</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
     <priority>0.90</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://sennacondominioseimoveis.com.br/venda</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <loc>https://administradoracapital.com.br/venda</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
     <priority>0.90</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://sennacondominioseimoveis.com.br/about</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
+    <loc>https://administradoracapital.com.br/about</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
     <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://administradoracapital.com.br/venda/1</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://administradoracapital.com.br/venda/2</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://administradoracapital.com.br/venda/3</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://administradoracapital.com.br/venda/4</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://administradoracapital.com.br/venda/5</loc>
+    <lastmod>2026-09-10T00:00:00+00:00</lastmod>
+    <priority>0.60</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

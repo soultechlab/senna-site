@@ -1,23 +1,44 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+const navItems = [
+  { to: "/", label: "Início", end: true },
+  { to: "/condominio", label: "Condomínio" },
+  { to: "/locacao", label: "Locação" },
+  { to: "/venda", label: "Venda" },
+  { to: "/about", label: "Quem Somos" },
+];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const linkClass = ({ isActive }) =>
+    isActive
+      ? "text-[var(--brand-accent)]"
+      : "text-white hover:text-[var(--brand-accent)] transition-colors";
+
   return (
-    <header className="sticky top-0 z-40 bg-brand-secondary backdrop-blur-lg border-b border-white/20">
+    <header className="on-dark sticky top-0 z-40 surface-graphite backdrop-blur-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
-        <Link to="/">
+        <Link
+          to="/"
+          aria-label="Capital Administradora — página inicial"
+          className="flex items-center min-h-[44px] lg:min-h-0"
+        >
           <img
-            src="logo.png"
-            alt="Logotipo Senna"
-            className="h-16 sm:h-18 md:h-20 lg:h-22 w-auto object-contain"
+            src="/logo-horizontal.png"
+            alt="Capital Administradora"
+            width="2368"
+            height="600"
+            className="h-9 sm:h-10 md:h-12 w-auto object-contain"
           />
         </Link>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-white/20 transition text-white"
+          className="md:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-white/10 transition text-white"
+          aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={mobileOpen}
         >
           <svg
             className="w-6 h-6"
@@ -34,39 +55,41 @@ export default function Header() {
           </svg>
         </button>
 
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base font-medium text-white">
-           <Link to="/" className="hover:text-white/70">
-            Início
-          </Link>
-          <Link to="/condominio" className="hover:text-white/70">
-            Condomínio
-          </Link>
-          <Link to="/locacao" className="hover:text-white/70">
-            Locação
-          </Link>
-          <Link to="/venda" className="hover:text-white/70">
-            Venda
-          </Link>
-          <Link to="/about" className="hover:text-white/70">
-            Quem Somos
-          </Link>
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base font-medium">
+          {navItems.map((item) => (
+            <NavLink key={item.to} to={item.to} end={item.end} className={linkClass}>
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
 
       {mobileOpen && (
-        <nav className="md:hidden mt-4 pt-4 border-t border-white/20 px-4 pb-4 flex flex-col gap-4 text-white">
-          <Link to="/condominio" onClick={() => setMobileOpen(false)}>
-            Condomínio
-          </Link>
-          <Link to="/locacao" onClick={() => setMobileOpen(false)}>
-            Locação
-          </Link>
-          <Link to="/venda" onClick={() => setMobileOpen(false)}>
-            Venda
-          </Link>
-          <Link to="/about" onClick={() => setMobileOpen(false)}>
-            Quem Somos
-          </Link>
+        <nav className="md:hidden border-t border-white/10 px-4 pb-4 flex flex-col">
+          {navItems
+            .filter((item) => item.to !== "/")
+            .map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  `${linkClass({ isActive })} flex items-center min-h-[48px] border-b border-white/5`
+                }
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          {/* No celular a barra superior fica oculta, então o portal precisa estar aqui */}
+          <a
+            href="https://senaadm.superlogica.net/clients/areadocondomino"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="mt-4 pill min-h-[48px] flex items-center justify-center bg-[var(--brand-accent)] text-black font-bold"
+          >
+            Portal do Condômino
+          </a>
         </nav>
       )}
     </header>

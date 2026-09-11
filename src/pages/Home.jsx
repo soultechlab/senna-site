@@ -27,7 +27,7 @@ ${message}
 ---
 Esta mensagem foi enviada através do formulário de contato do site.`;
     
-    const mailtoLink = `mailto:comercial@sennacondominioseimoveis.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:contato@administradoracapital.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Abrir cliente de email
     window.location.href = mailtoLink;
@@ -35,12 +35,16 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Senna Administradora",
-    "description": "Empresa especializada em administração de condomínios, locação e venda de imóveis no Rio de Janeiro",
-    "url": "https://sennacondominioseimoveis.com.br",
+    "@type": "RealEstateAgent",
+    "@id": "https://administradoracapital.com.br/#business",
+    "name": "Capital Administradora",
+    "alternateName": "Capital Sua Administradora",
+    "description": "Administradora de condomínios e imobiliária no Rio de Janeiro, especializada em gestão condominial, locação e venda de imóveis.",
+    "url": "https://administradoracapital.com.br/",
+    "logo": "https://administradoracapital.com.br/logo.png",
+    "image": "https://administradoracapital.com.br/og-image.jpg",
     "telephone": "+55-21-99762-7530",
-    "email": "comercial@sennacondominioseimoveis.com.br",
+    "email": "contato@administradoracapital.com.br",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Rio de Janeiro",
@@ -94,6 +98,7 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
       ]
     },
     "sameAs": [
+      "https://www.instagram.com/capitalsuaadministradora/",
       "https://wa.me/5521997627530"
     ]
   };
@@ -101,18 +106,18 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
   return (
     <>
       <SEO
-        title="Senna Administradora - Gestão de Condomínios, Locação e Venda de Imóveis RJ"
-        description="Administração de condomínios, locação e venda de imóveis no Rio de Janeiro. Atendimento personalizado, transparência e suporte próximo. Entre em contato!"
-        keywords="administração de condomínios Rio de Janeiro, locação de imóveis RJ, venda de imóveis Rio de Janeiro, administradora predial, gestão de condomínios, imobiliária RJ"
-        canonicalUrl="https://sennacondominioseimoveis.com.br"
+        title="Capital Administradora | Administração de Condomínios e Imóveis no Rio de Janeiro"
+        description="Capital Administradora: gestão de condomínios, locação e venda de imóveis no Rio de Janeiro. Prestação de contas transparente, portal do condômino e atendimento personalizado."
+        keywords="Capital Administradora, administradora de condomínios Rio de Janeiro, administração de condomínios RJ, gestão de condomínios, portal do condômino, prestação de contas condomínio, locação de imóveis RJ, venda de imóveis Rio de Janeiro, administradora predial, imobiliária RJ"
+        canonicalUrl="https://administradoracapital.com.br/"
         structuredData={structuredData}
       />
       <main>
-      <section className="relative overflow-hidden">
+      <section className="on-dark relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg"
-            alt="Prédios residenciais e comerciais na cidade do Rio de Janeiro - Administração de condomínios Senna"
+            alt="Prédios residenciais e comerciais na cidade do Rio de Janeiro - Administração de condomínios Capital Administradora"
             className="w-full h-[60vh] sm:h-[70vh] object-cover scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-black/40"></div>
@@ -152,7 +157,7 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
             title={
               <>
                 Soluções{" "}
-                <span className="text-[var(--brand-accent)]">completas</span>{" "}
+                <span className="text-metal-ink">completas</span>{" "}
                 para o seu condomínio
               </>
             }
@@ -184,25 +189,25 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
         </div>
       </section>
 
-      <section id="quem-somos" className="section-padding bg-white">
+      <section id="quem-somos" className="section-padding bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1536376072261-38c75010e6c9?q=80&w=1200&auto=format&fit=crop"
-              alt="Escritório moderno da Senna Administradora com profissionais especializados em gestão de condomínios"
+              alt="Escritório moderno da Capital Administradora com profissionais especializados em gestão de condomínios"
               className="rounded-3xl shadow-2xl"
             />
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[var(--brand-accent)] to-[#c9a332] rounded-3xl opacity-20"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[var(--brand-accent)] to-[var(--brand-accent-deep)] rounded-3xl opacity-20"></div>
           </div>
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-accent)]/10 text-[var(--brand-accent)] text-sm font-semibold uppercase mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-accent-soft)] text-[var(--brand-accent)] text-sm font-semibold uppercase mb-6">
               Sobre Nós
             </div>
             <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
-              Quem <span className="text-[var(--brand-accent)]">Somos</span>
+              Quem <span className="text-metal-ink">Somos</span>
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Senna Administradora é uma empresa com experiência no
+              Capital Administradora é uma empresa com experiência no
               mercado imobiliário, realizando administração de condomínios,
               locações, compra e venda de imóveis. Nosso diferencial é o
               atendimento personalizado direcionado à necessidade de cada
@@ -213,7 +218,7 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
                 Solicitar Proposta
               </Button>
               <Button
-                variant="dark"
+                variant="secondary"
                 href="https://senaadm.superlogica.net/clients/areadocondomino"
               >
                 Acesso Exclusivo
@@ -233,7 +238,7 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
             title={
               <>
                 Vamos{" "}
-                <span className="text-[var(--brand-accent)]">conversar</span>?
+                <span className="text-metal-ink">conversar</span>?
               </>
             }
             subtitle="Entre em contato conosco e descubra como podemos ajudar na gestão do seu condomínio."
@@ -248,30 +253,30 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
                 </h4>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center">
                       <Phone className="w-6 h-6 text-[var(--brand-accent)]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Telefone</p>
                       <a
                         href="tel:+5521997627530"
-                        className="text-gray-600 hover:text-[var(--brand-accent)] transition"
+                        className="inline-flex items-center min-h-[44px] lg:min-h-0 text-gray-600 hover:text-[var(--brand-accent)] transition"
                       >
                         (21) 99762-7530
                       </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[var(--brand-accent)]/10 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[var(--brand-accent-soft)] rounded-full flex items-center justify-center">
                       <Mail className="w-6 h-6 text-[var(--brand-accent)]" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">E-mail</p>
                       <a
-                        href="mailto:comercial@sennacondominioseimoveis.com.br"
-                        className="text-gray-600 hover:text-[var(--brand-accent)] transition break-all"
+                        href="mailto:contato@administradoracapital.com.br"
+                        className="inline-flex items-center min-h-[44px] lg:min-h-0 text-gray-600 hover:text-[var(--brand-accent)] transition break-all"
                       >
-                        comercial@sennacondominioseimoveis.com.br
+                        contato@administradoracapital.com.br
                       </a>
                     </div>
                   </div>
@@ -288,7 +293,7 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
                     WhatsApp
                   </a>
                   <a
-                    href="mailto:comercial@sennacondominioseimoveis.com.br"
+                    href="mailto:contato@administradoracapital.com.br"
                     className="pill px-6 py-3 bg-brand-secondary text-white hover:bg-brand-secondaryDark font-semibold transition-all duration-300 flex items-center gap-2"
                   >
                     <Mail className="w-5 h-5" />
@@ -308,14 +313,14 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
                   name="name"
                   required
                   placeholder="Seu nome*"
-                  className="rounded-xl border border-gray-200 px-4 py-3 focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent)]/20 transition"
+                  className="rounded-xl border border-gray-200 px-4 py-3 focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent-soft-strong)] transition"
                 />
                 <input
                   name="email"
                   required
                   type="email"
                   placeholder="Seu e-mail*"
-                  className="rounded-xl border border-gray-200 px-4 py-3 focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent)]/20 transition"
+                  className="rounded-xl border border-gray-200 px-4 py-3 focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent-soft-strong)] transition"
                 />
               </div>
               <input
@@ -323,17 +328,17 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
                 required
                 type="tel"
                 placeholder="Telefone*"
-                className="w-full rounded-xl border border-gray-200 px-4 py-3 focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent)]/20 transition"
+                className="w-full rounded-xl border border-gray-200 px-4 py-3 focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent-soft-strong)] transition"
               />
               <textarea
                 name="message"
                 required
                 placeholder="Sua mensagem*"
-                className="w-full rounded-xl border border-gray-200 px-4 py-3 min-h-[120px] focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent)]/20 transition resize-none"
+                className="w-full rounded-xl border border-gray-200 px-4 py-3 min-h-[120px] focus:border-[var(--brand-accent)] focus:ring-2 focus:ring-[var(--brand-accent-soft-strong)] transition resize-none"
               ></textarea>
               <button 
                 type="submit"
-                className="w-full rounded-xl px-6 py-4 bg-gradient-to-r from-[var(--brand-accent)] to-[#c9a332] text-black font-bold text-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="btn-primary w-full rounded-xl px-6 py-4 font-bold text-lg hover:scale-[1.02]"
               >
                 Entre em Contato
               </button>
