@@ -1,0 +1,6 @@
+# Domínio antigo -> novo (301 permanente)
+https://sennaadministradora.com/*      https://administradoracapital.com.br/:splat   301!
+https://www.sennaadministradora.com/*  https://administradoracapital.com.br/:splat   301!
+
+# Fallback do React Router (rotas client-side)
+/*  /index.html  200
