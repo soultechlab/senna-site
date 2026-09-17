@@ -125,7 +125,7 @@ Esta mensagem foi enviada através do formulário de contato do site.`;
         <div className="relative max-w-7xl mx-auto px-4 h-[60vh] sm:h-[70vh] flex items-center">
           <div className="text-white max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Gestão de Condomínios com{" "}
+              Gestão de Condomínios e Imóveis com{" "}
               <span className="text-[var(--brand-accent)]">Transparência</span>
             </h1>
             <p className="mt-4 text-lg text-white/90">
