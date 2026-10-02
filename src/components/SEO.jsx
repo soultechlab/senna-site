@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { SEOContext } from './seoContext';
 
 export const SITE_URL = 'https://administradoracapital.com.br';
 export const SITE_NAME = 'Capital Administradora';
@@ -15,6 +16,11 @@ const SEO = ({
   canonicalUrl = `${SITE_URL}/`,
   structuredData,
 }) => {
+  const collect = useContext(SEOContext);
+  if (collect) {
+    collect({ title, description, keywords, ogTitle, ogDescription, ogImage, ogImageAlt, canonicalUrl, structuredData });
+  }
+
   useEffect(() => {
     document.title = title;
     document.documentElement.lang = 'pt-BR';
@@ -62,6 +68,8 @@ const SEO = ({
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Dados estruturados da página (o JSON-LD da organização vive no index.html)
+    // Remove o JSON-LD que veio no HTML pré-renderizado (ou de outra página)
+    document.head.querySelectorAll('script[data-seo-page]').forEach((el) => el.remove());
     if (!structuredData) return undefined;
     const script = document.createElement('script');
     script.type = 'application/ld+json';

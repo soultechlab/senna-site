@@ -19,6 +19,18 @@ npm run preview  # servir o build
 npm run lint
 ```
 
+## SEO e IAs
+
+`npm run build` pré-renderiza cada rota em HTML estático
+(`scripts/prerender.mjs` + `src/entry-server.jsx`). Crawlers de IA (GPTBot,
+ClaudeBot, PerplexityBot…) não executam JavaScript, então dependem disso para
+ler o conteúdo. O mesmo script gera o `sitemap.xml` a partir da lista `routes`
+em `src/entry-server.jsx`. Ao criar uma página, inclua a rota lá.
+
+- `public/robots.txt`: libera buscadores e crawlers de IA
+- `public/llms.txt`: resumo da empresa para assistentes de IA (atualize se mudar contato/serviços)
+- `dist/spa.html`: casca vazia usada como fallback do SPA em `_redirects`
+
 ## Identidade visual
 
 A marca é grafite profundo + prata metálica (sem dourado). Os tokens vivem em

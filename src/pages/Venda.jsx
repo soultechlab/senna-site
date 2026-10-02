@@ -3,13 +3,10 @@ import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import SEO from "../components/SEO";
 import { Home, MapPin, Car, Bath, Bed, Square, Eye, FileText, Handshake, DollarSign, Search, FileCheck, Building2, Store, TreePine } from "lucide-react";
-import { imoveis } from "../data/imoveis";
+// import { imoveis } from "../data/imoveis"; — volta junto com a vitrine comentada abaixo
 import { Link } from "react-router-dom";
 
 export default function Venda() {
-  console.log("Imoveis data:", imoveis);
-  console.log("Imoveis length:", imoveis.length);
-  
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",

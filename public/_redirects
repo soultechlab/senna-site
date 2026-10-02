@@ -3,4 +3,4 @@ https://sennaadministradora.com/*      https://administradoracapital.com.br/:spl
 https://www.sennaadministradora.com/*  https://administradoracapital.com.br/:splat   301!
 
 # Fallback do React Router (rotas client-side)
-/*  /index.html  200
+/*  /spa.html  200
